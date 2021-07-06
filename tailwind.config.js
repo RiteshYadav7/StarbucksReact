@@ -22,15 +22,18 @@ module.exports = {
       sans: "'Helvetica Neue', Helvetica, Arial, sans-serif",
     },
     extend: {
-      backgroundImage: theme => ({
-        'hero': "url('./img/star.webp')"
-      })
+      fontSize: {
+        13: "0.8125rem",
+      },
+      backgroundImage: {
+        hero: "url('./img/star.webp')"
+      },
     },
   },
   variants: {
     extend: {},
   },
   plugins: [
-    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/aspect-ratio')
   ],
 }
