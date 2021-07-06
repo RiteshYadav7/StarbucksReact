@@ -29,8 +29,6 @@ const ConfirmationDialog: React.FC<Props> = ({
             <Transition.Root 
                 show={isDialogOpen} 
                 as={Fragment}
-                // beforeLeave={() => setIsAnimating(true)}
-                // afterLeave={() => setIsAnimating(false)}
             >
                 <Dialog open={isDialogOpen} onClose={setIsDialogOpen}>
                     <Transition.Child 
@@ -56,9 +54,11 @@ const ConfirmationDialog: React.FC<Props> = ({
                     >
 
                         <div className="fixed flex flex-col items-center text-center top-0 bottom-1/3 right-1/3 rounded-md z-20 w-96 p-5 pt-40 transform bg-white">
+                            <div className="absolute top-1/4 right-2">
+                                <XIcon className="h-4 w-4 cursor-pointer" onClick={() => setIsDialogOpen(false)}></XIcon>
+                            </div>
                             <div className="-mt-12">
                                 <ExclamationIcon className="text-warn-500 h-28 w-28"></ExclamationIcon>
-                                <XIcon className="h-4 w-4 cursor-pointer" onClick={() => setIsDialogOpen(false)}></XIcon>
                             </div>
                             <h1 className="text-3xl">{title}</h1><br />
                             <p>
@@ -66,8 +66,8 @@ const ConfirmationDialog: React.FC<Props> = ({
                                 cannot be undone.
                             </p><br />
                             <div className="flex">
-                                <button className="rounded px-4 py-2 mr-2 border tracking-widest bg-gray-400 text-white" onClick={() => setIsDialogOpen(false)}>Cancel</button>
-                                <button className="rounded px-4 py-2 ml-2 border tracking-widest bg-warn-500 text-white" onClick={() => setIsDialogOpen(false)}>Delete</button>
+                                <button className="rounded px-4 py-2 mr-2 border tracking-widest bg-gray-400 text-white" onClick={() => setIsDialogOpen(false)}>{cancelText}</button>
+                                <button className="rounded px-4 py-2 ml-2 border tracking-widest bg-warn-500 text-white" onClick={() => setIsDialogOpen(false)}>{okText}</button>
                             </div>
                         </div>
                     </Transition.Child>
