@@ -17,6 +17,7 @@ module.exports = {
       black: colors.black,
       warn: colors.red,
       success: colors.green,
+      gold: "#cba258",
     },
     fontFamily: {
       sans: "'Helvetica Neue', Helvetica, Arial, sans-serif",

@@ -20,7 +20,7 @@ const App: React.FC<Props> = (props) => {
           <BrowserRouter>
             <Nav />
             <Header />
-            <HeroSection />
+            {/* <HeroSection /> */}
             <Switch>
               <Redirect from="/" to="/rewards" exact />
               <Route path="/rewards">
@@ -33,8 +33,6 @@ const App: React.FC<Props> = (props) => {
             
           </BrowserRouter>
 
-          {/* <div className="h-screen bg-primary-200"></div> */}
-          {/* {<ConfirmationDialog open={isDialogOpen} onClose={setIsDialogOpen} />} */}
           <ConfirmationDialog />
         </div>
     );

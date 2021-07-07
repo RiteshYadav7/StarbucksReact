@@ -25,7 +25,7 @@ const ConfirmationDialog: React.FC<Props> = ({
     return(
         <>
 
-            <button onClick={() => setIsDialogOpen(!isDialogOpen)}>ConfirmationDialog</button>
+            <button onClick={() => setIsDialogOpen(!isDialogOpen)} className="bg-primary-300 rounded-full p-4 py-2">Confirmation Dialog Button</button>
             <Transition.Root 
                 show={isDialogOpen} 
                 as={Fragment}
