@@ -2,6 +2,7 @@ import React from "react";
 import ConfirmationDialog from "./ConfirmationDialog";
 import GettingStarted from "./GettingStarted";
 import HeroSection from "./HeroSection";
+import TabSection from "./TabSection";
 
 interface Props {}
 
@@ -12,6 +13,7 @@ const RewardsPage: React.FC<Props> = (props) => {
             <ConfirmationDialog />
             <HeroSection />
             <GettingStarted />
+            <TabSection />
         </>
     );
 };
