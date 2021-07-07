@@ -20,7 +20,6 @@ const App: React.FC<Props> = (props) => {
           <BrowserRouter>
             <Nav />
             <Header />
-            {/* <HeroSection /> */}
             <Switch>
               <Redirect from="/" to="/rewards" exact />
               <Route path="/rewards">
@@ -32,8 +31,6 @@ const App: React.FC<Props> = (props) => {
             </Switch>
             
           </BrowserRouter>
-
-          <ConfirmationDialog />
         </div>
     );
 };

@@ -4,9 +4,10 @@ interface Props extends AnchorHTMLAttributes<HTMLAnchorElement> {
     theme?: "white" | "black";
     linkText?: string;
     linkUrl?: string;
+    bg?: string;
 }
 
-const RoundedLink: React.FC<Props> = ({ theme, linkText, linkUrl }) => {
+const RoundedLink: React.FC<Props> = ({ theme, linkText, linkUrl, bg }) => {
     let themeClasses = "";
 
     if(theme === "black") {
@@ -19,7 +20,7 @@ const RoundedLink: React.FC<Props> = ({ theme, linkText, linkUrl }) => {
         <a
             className={
                 "flex-shrink-0 px-4 py-2 text-sm border font-semibold tracking-wide rounded-full " 
-                + themeClasses
+                + themeClasses + " " + bg
             }
             href={linkUrl}
         >{linkText}</a>
